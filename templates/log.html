@@ -1,0 +1,57 @@
+{% extends "layout.html" %} {% block title %} Log In {% endblock %} {% block
+content %}
+<style>
+  input[type="text"],
+  input[type="password"] {
+    width: 20%;
+    padding: 12px 20px;
+    display: block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+  button {
+    background-color: #071d49;
+    color: white;
+    padding: 1%;
+    border: none;
+    cursor: pointer;
+    width: 5%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 30%;
+  }
+  button:hover {
+    opacity: 0.8;
+  }
+  .loginInput {
+    padding: 1%;
+  }
+  a {
+    color: #071d49;
+    text-decoration: none;
+  }
+  a:hover {
+    opacity: 0.8;
+  }
+</style>
+<div>
+  <div class="loginInput">
+    <label for="userName"></label>
+    <input type="text" placeholder="Enter Username" name="userName" required />
+  </div>
+  <div class="loginInput">
+    <label for="psw"></label>
+    <input type="password" placeholder="Enter Password" name="psw" required />
+  </div>
+  <form action="{{ url_for('home')}}">
+    <div>
+      <button>Log In</button>
+    </div>
+  </form>
+  <div style="text-align: center">
+    <p>Need to sign up?</p>
+    <a href="{{ url_for('signup')}}">Sign Up</a>
+  </div>
+</div>
+{% endblock %}

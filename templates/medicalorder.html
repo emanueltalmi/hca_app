@@ -1,0 +1,121 @@
+{% extends "layout.html" %} {% block title %} Medical Order {% endblock %} {%
+block content %}
+<style>
+  input[type="text"] {
+    width: 20%;
+    padding: 12px 20px;
+    display: block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+  #p2 {
+    text-align: center;
+    color: black;
+  }
+  h1.blink {
+    animation: 1s blinker linear infinite;
+    -webkit-animation: 1s blinker linear infinite;
+    -moz-animation: 1s blinker linear infinite;
+  }
+  img.headericon {
+    float: left;
+    border: solid;
+    border-color: black;
+    border-width: 3px;
+    margin-right: 5px;
+  }
+  @-moz-keyframes blinker {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes blinker {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes blinker {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .medicalorderInput {
+    padding: 1%;
+  }
+  .medicalsubmit {
+    background-color: #071d49;
+    color: white;
+    display: block;
+    margin: 0 auto;
+    border: none;
+    border-radius: 30%;
+    padding: 0.5%;
+  }
+</style>
+<h1 style="text-align: center; background-color: #071d49; color: white">
+  Health Care Activities Medical Supply Ordering
+</h1>
+<div id="p2">
+  <h1 class="blink">Order Your Medical Supplies Here!</h1>
+</div>
+<div id="p4">
+  <form method="POST">
+    <div class="medicalorderInput">
+      <input type="text" name="username" placeholder="Enter User Name" />
+    </div>
+    <div class="medicalorderInput">
+      <input type="text" name="item1" placeholder="Medical Item #1" />
+    </div>
+    <div class="medicalorderInput">
+      <input type="text" name="item2" placeholder="Medical Item #2" />
+    </div>
+    <div class="medicalorderInput">
+      <input type="text" name="item3" placeholder="Medical Item #3" />
+    </div>
+    <div class="medicalorderInput">
+      <input type="text" name="item4" placeholder="Medical Item #4" />
+    </div>
+    <div class="medicalorderInput">
+      <input type="text" name="item5" placeholder="Medical Item #5" />
+    </div>
+    <div class="medicalorderInput">
+      <input type="text" name="item6" placeholder="Medical Item #6" />
+    </div>
+    <div class="medicalorderInput">
+      <input type="text" name="item7" placeholder="Medical Item #7" />
+    </div>
+    <div class="medicalorderInput">
+      <input type="text" name="item8" placeholder="Medical Item #8" />
+    </div>
+    <input
+      type="submit"
+      class="medicalsubmit"
+      name="regmedical"
+      id="regmedical"
+      value="Submit"
+    />
+    <br />
+  </form>
+</div>
+
+{% endblock %}

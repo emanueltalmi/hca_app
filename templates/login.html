@@ -1,0 +1,83 @@
+{% extends "layout.html" %} {% block title %} Log In {% endblock %} {% block
+content %}
+<style>
+  input[type="text"],
+  input[type="password"] {
+    width: 20%;
+    padding: 12px 20px;
+    display: block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+  button {
+    background-color: #071d49;
+    color: white;
+    padding: 1%;
+    border: none;
+    cursor: pointer;
+    width: 5%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 30%;
+  }
+  button:hover {
+    opacity: 0.8;
+  }
+  .loginInput {
+    padding: 1%;
+  }
+  a {
+    color: #071d49;
+    text-decoration: none;
+  }
+  a:hover {
+    opacity: 0.8;
+  }
+  .loginsubmit {
+    background-color: #071d49;
+    color: white;
+    display: block;
+    margin: 0 auto;
+    border: none;
+    border-radius: 30%;
+    padding: 0.5%;
+  }
+</style>
+<div>
+  <form method="POST">
+    <h1 style="text-align: center; background-color: #071d49; color: white">
+      Log In
+    </h1>
+    <div class="loginInput">
+      <input
+        type="text"
+        name="username"
+        id="username"
+        placeholder="Enter Username"
+        required
+      />
+    </div>
+    <div class="loginInput">
+      <input
+        type="password"
+        name="psw"
+        id="psw"
+        placeholder="Enter Password"
+        required
+      />
+    </div>
+    <input
+      type="submit"
+      class="loginsubmit"
+      name="logIn"
+      id="logIn"
+      value="Log In"
+    />
+    <div style="text-align: center">
+      <p>Need to sign up?</p>
+      <a href="{{ url_for('signup')}}">Sign Up</a>
+    </div>
+  </form>
+</div>
+{% endblock %}

@@ -1,0 +1,545 @@
+{% extends "layout.html" %} {% block title %} Meal Prep {% endblock %} {% block
+content %}
+<style>
+  img#logo {
+    max-width: 100px;
+    max-height: 100px;
+  }
+
+  #menubox {
+    background-color: rgb(236, 236, 236);
+    width: 600px;
+    border: 5px solid #071d49;
+    padding: 10px;
+    margin: 20px;
+  }
+  #menubox2 {
+    background-color: rgb(236, 236, 236);
+    width: 600px;
+    height: 500px;
+    border: 5px solid #071d49;
+    padding: 30px;
+    margin: 20px;
+  }
+
+  .bordertext {
+    border: 1px;
+    border-style: solid;
+    border-color: #071d49;
+  }
+
+  #header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10%;
+    background-color: #00a2ff;
+    color: white;
+    font-size: 20px;
+  }
+  .nav {
+    list-style: none;
+  }
+
+  .nav li {
+    display: inline-block;
+    padding: 0px 20px;
+  }
+
+  #nav_button {
+    font-size: 16px;
+    padding: 15px 30px;
+    color: white;
+    border-radius: 60px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  #p1 {
+    text-align: center;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 40pt;
+    font-weight: bold;
+    color: black;
+    background-color: #071d49;
+  }
+  #p2 {
+    text-align: center;
+    color: black;
+  }
+  h1.blink {
+    animation: 1s blinker linear infinite;
+    -webkit-animation: 1s blinker linear infinite;
+    -moz-animation: 1s blinker linear infinite;
+  }
+  #p3 {
+    color: black;
+    font-weight: bold;
+    font-size: 150%;
+  }
+  #p4 {
+    font-size: 20px;
+    color: black;
+  }
+  label {
+    display: inline-block;
+    width: 80px;
+  }
+
+  img.headericon {
+    float: left;
+    border: solid;
+    border-color: black;
+    border-width: 3px;
+    margin-right: 5px;
+  }
+  @-moz-keyframes blinker {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes blinker {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes blinker {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  #p5 {
+    text-align: center;
+    background-color: #071d49;
+    color: black;
+    font-style: italic;
+    font-weight: bolder;
+  }
+  input[type="text"] {
+    width: 20%;
+    padding: 12px 20px;
+    display: block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+  .mealorderInput {
+    padding: 1%;
+    background-color: #071d49;
+  }
+  .mealsubmit {
+    background-color: #071d49;
+    color: white;
+    display: block;
+    margin: 0 auto;
+    border: none;
+    border-radius: 30%;
+    padding: 0.5%;
+  }
+</style>
+<form method="POST">
+  <div id="p2">
+    <h1 class="blink">Order Breakfast here!</h1>
+    <hr />
+  </div>
+  <center>
+    <div class="mealorderInput">
+      <input type="text" name="username" placeholder="Enter User Name" />
+    </div>
+    <div class="mealorderInput">
+      <input type="text" name="paymentnumber" placeholder="Enter Card Number" />
+    </div>
+    <div class="mealorderInput">
+      <input type="text" name="expccv" placeholder="Exp CCV" />
+    </div>
+    <div id="menubox">
+      <h1>Halal Turkey Bacon</h1>
+      <div>
+        <img id="logo" src="/static/Bacon.png" width="100" />
+      </div>
+      <p>
+        Turkey bacon is a meat prepared from chopped, formed, cured, and smoked
+        turkey. It contains the following ingredients:
+      </p>
+
+      <div style="float: left; width: 50%">
+        <ul>
+          <li>Turkey</li>
+          <li>Water</li>
+          <li>Sugar</li>
+          <li>Contains 2% or Less Salt</li>
+          <li>Potassium Lactate</li>
+        </ul>
+      </div>
+      <div style="float: right; width: 50%">
+        <ul>
+          <li>Potassium Acetate</li>
+          <li>Sodium Diacetate</li>
+          <li>Natural Smoke Flavor</li>
+          <li>Sodium Nitrite</li>
+          <li>Flavor (Canola Oil, Natural Smoke)</li>
+        </ul>
+      </div>
+
+      <br />
+      <hr />
+
+      <h2>TOTAL CALORIES: 313</h2>
+      <hr />
+      <h2>$2.99</h2>
+    </div>
+
+    <div id="menubox">
+      <h1>Eggs</h1>
+      <div>
+        <img id="logo" src="/static/Egg.png" width="100" />
+      </div>
+      <p>
+        Fried eggs,scrambled eggs or boiled eggs; you choose. Eggs are one of
+        the few foods that should be classified as “superfoods.” They are loaded
+        with nutrients, some of which are rare in the modern diet:
+      </p>
+
+      <div style="float: left; width: 50%">
+        <ul>
+          <li>Butter</li>
+          <li>Pepper</li>
+        </ul>
+      </div>
+      <div style="float: right; width: 50%">
+        <ul>
+          <li>Salt</li>
+          <li>Chives</li>
+        </ul>
+      </div>
+
+      <br />
+      <hr />
+
+      <h2>TOTAL CALORIES: 78</h2>
+      <hr />
+      <h2>$0.99</h2>
+    </div>
+
+    <div id="menubox">
+      <h1>Yogurt</h1>
+      <div>
+        <img id="logo" src="/static/Yogurt.png" width="100" />
+      </div>
+      <p>
+        Yogurt is a food produced by bacterial fermentation of milk. Which can
+        come in many favors such as strawberry, vanilla, peach and plain:
+      </p>
+
+      <div style="float: left; width: 50%">
+        <ul>
+          <li>Milk</li>
+          <li>Sugar</li>
+          <li>Peach</li>
+        </ul>
+      </div>
+      <div style="float: right; width: 50%">
+        <ul>
+          <li>Peach</li>
+          <li>Strawberry</li>
+          <br />
+        </ul>
+      </div>
+      <br />
+      <hr />
+
+      <h2>TOTAL CALORIES: 100</h2>
+      <hr />
+      <h2>$0.99</h2>
+    </div>
+
+    <div id="menubox">
+      <h1>Coffee</h1>
+      <div>
+        <img id="logo" src="/static/Coffee.png" width="100" />
+      </div>
+      <p>
+        Turkey bacon is a meat prepared from chopped, formed, cured, and smoked
+        turkey. It contains the following ingredients:
+      </p>
+
+      <div style="float: left; width: 50%">
+        <ul>
+          <li>Water</li>
+          <li>Milk</li>
+        </ul>
+      </div>
+      <div style="float: right; width: 50%">
+        <ul>
+          <li>Sugar</li>
+          <li>Creamer</li>
+        </ul>
+      </div>
+
+      <br />
+      <hr />
+
+      <h2>TOTAL CALORIES: 1</h2>
+      <hr />
+      <h2>$0.99</h2>
+    </div>
+    <div class="mealorderInput">
+      <input
+        type="text"
+        name="breakfastorder"
+        placeholder="Enter Breakfast Order"
+      />
+    </div>
+    <div class="mealorderInput">
+      <input
+        type="text"
+        name="breakfastday"
+        placeholder="Enter Days for Breakfast"
+      />
+    </div>
+
+    <div id="p2">
+      <hr />
+      <h1 class="blink">Order Lunch here!</h1>
+      <hr />
+    </div>
+
+    <div id="menubox">
+      <h1>Tuna Fish Sandwich</h1>
+      <div>
+        <img id="logo" src="/static/Tuna.png" width="100" />
+      </div>
+      <p>
+        A tuna fish sandwich is made from canned tuna made into a tuna salad by
+        adding mayonnaise, and sometimes other ingredients such as onion as well
+        as other vegetables.
+      </p>
+
+      <div style="float: left; width: 50%">
+        <ul>
+          <li>Canned Tuna</li>
+          <li>Garlic</li>
+          <li>Lettuce</li>
+        </ul>
+      </div>
+      <div style="float: right; width: 50%">
+        <ul>
+          <li>Mayonnaise</li>
+          <li>Salt & Pepper</li>
+          <li>Onion</li>
+        </ul>
+      </div>
+      <br />
+      <hr />
+
+      <h2>TOTAL CALORIES: 383</h2>
+      <hr />
+      <h2>$3.99</h2>
+    </div>
+
+    <div id="menubox">
+      <h1>Fruits</h1>
+      <div>
+        <img id="logo" src="/static/fruits.png" width="100" />
+      </div>
+      <p>An apple a day, keeps the doctor away :)</p>
+
+      <div style="float: left; width: 50%">
+        <ul>
+          <li>Apple</li>
+          <li>Banana</li>
+          <li>Pomegranate</li>
+        </ul>
+      </div>
+      <div style="float: right; width: 50%">
+        <ul>
+          <li>Grapes</li>
+          <li>Pineapple</li>
+          <li>Oranges</li>
+        </ul>
+      </div>
+      <br />
+      <hr />
+
+      <h2>$1.99</h2>
+    </div>
+
+    <div id="menubox">
+      <h1>Kosher Tomato Soup</h1>
+      <div>
+        <img id="logo" src="/static/Tomato.png" width="100" />
+      </div>
+      <p>
+        Tomato soup is a soup with tomatoes as the primary ingredient. It may be
+        smooth in texture, and there are also recipes that include chunks of
+        tomato, cream, chicken or vegetable stock.
+      </p>
+
+      <div style="float: left; width: 50%">
+        <ul>
+          <li>Tomato</li>
+          <li>Cream</li>
+          <li>vegetables</li>
+        </ul>
+      </div>
+      <div style="float: right; width: 50%">
+        <ul>
+          <li>Basil</li>
+          <li>Bouillon</li>
+          <li>Onion</li>
+        </ul>
+      </div>
+      <br />
+      <hr />
+
+      <h2>TOTAL CALORIES: 74</h2>
+      <hr />
+      <h2>$1.99</h2>
+    </div>
+    <div class="mealorderInput">
+      <input type="text" name="lunchorder" placeholder="Enter Lunch Order" />
+    </div>
+    <div class="mealorderInput">
+      <input type="text" name="lunchday" placeholder="Enter Days for Lunch" />
+    </div>
+
+    <hr />
+    <div id="p2">
+      <h1 class="blink">Order Dinner here!</h1>
+      <hr />
+    </div>
+
+    <div id="menubox">
+      <h1>Halal Steak</h1>
+      <div>
+        <img id="logo" src="/static/Steak.png" width="100" />
+      </div>
+      <p>
+        A steak is a meat generally sliced across the muscle fibers, potentially
+        including a bone. It is normally grilled, though can also be pan-fried.
+      </p>
+
+      <div style="float: left; width: 50%">
+        <ul>
+          <li>Butter</li>
+          <li>Salt & Pepper</li>
+          <li>Olive Oil</li>
+        </ul>
+      </div>
+      <div style="float: right; width: 50%">
+        <ul>
+          <li>Paprika</li>
+          <li>Garlic Powder</li>
+          <li>Chives</li>
+        </ul>
+      </div>
+      <br />
+      <hr />
+
+      <h2>TOTAL CALORIES: 679</h2>
+      <hr />
+      <h2>$5.99</h2>
+    </div>
+
+    <div id="menubox">
+      <h1>Salad</h1>
+      <div>
+        <img id="logo" src="/static/Salad.png" width="100" />
+      </div>
+      <p>
+        A mixture of raw usually green leafy vegetables combined with other
+        vegetables (as tomato and cucumber).
+      </p>
+
+      <div style="float: left; width: 50%">
+        <ul>
+          <li>Lettuce</li>
+          <li>Tomato</li>
+          <li>Cucumber</li>
+        </ul>
+      </div>
+      <div style="float: right; width: 50%">
+        <ul>
+          <li>Dressing</li>
+          <li>Bell Pepper</li>
+          <br />
+        </ul>
+      </div>
+      <br />
+      <hr />
+
+      <h2>TOTAL CALORIES: 12</h2>
+      <hr />
+      <h2>$0.99</h2>
+    </div>
+
+    <div id="menubox">
+      <h1>Meatloof</h1>
+      <div>
+        <img id="logo" src="/static/Meatloof.png" width="100" />
+      </div>
+      <p>
+        Meatloaf is a dish of ground meat that has been combined with other
+        ingredients and formed into the shape of a loaf, then baked or smoked.
+      </p>
+
+      <div style="float: left; width: 50%">
+        <ul>
+          <li>Ground beef</li>
+          <li>Bread</li>
+          <li>Eggs</li>
+        </ul>
+      </div>
+      <div style="float: right; width: 50%">
+        <ul>
+          <li>Onion</li>
+          <li>Salt & Pepper</li>
+          <li>Ketchup</li>
+        </ul>
+      </div>
+      <br />
+      <hr />
+
+      <h2>TOTAL CALORIES: 149</h2>
+      <hr />
+      <h2>$4.99</h2>
+    </div>
+    <div class="mealorderInput">
+      <input type="text" name="dinnerorder" placeholder="Enter Dinner Order" />
+    </div>
+    <div class="mealorderInput">
+      <input type="text" name="dinnerday" placeholder="Enter Days for Dinner" />
+    </div>
+    <div style="padding: 1%">
+      <input
+        type="submit"
+        class="mealsubmit"
+        name="mealsub"
+        id="mealsub"
+        value="Submit"
+      />
+    </div>
+  </center>
+</form>
+{% endblock %}

@@ -1,0 +1,126 @@
+{% extends "layout.html" %} {% block title %} Grocery Order {% endblock %} {%
+block content %}
+<style>
+  input[type="text"] {
+    width: 20%;
+    padding: 12px 20px;
+    display: block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+  #p2 {
+    text-align: center;
+    color: black;
+  }
+  h1.blink {
+    animation: 1s blinker linear infinite;
+    -webkit-animation: 1s blinker linear infinite;
+    -moz-animation: 1s blinker linear infinite;
+  }
+  #p3 {
+    color: black;
+    font-weight: bold;
+    font-size: 150%;
+  }
+  img.headericon {
+    float: left;
+    border: solid;
+    border-color: black;
+    border-width: 3px;
+    margin-right: 5px;
+  }
+  @-moz-keyframes blinker {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes blinker {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes blinker {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .groceryitemInput {
+    padding: 1%;
+  }
+  .grocerysubmit {
+    background-color: #071d49;
+    color: white;
+    display: block;
+    margin: 0 auto;
+    border: none;
+    border-radius: 30%;
+    padding: 0.5%;
+  }
+</style>
+<h1 style="text-align: center; background-color: #071d49; color: white">
+  Health Care Activities Grocery Ordering
+</h1>
+<div id="p2">
+  <h1 class="blink">Order Your Groceries Here!</h1>
+</div>
+<div>
+  <form method="POST">
+    <div class="groceryitemInput">
+      <input type="text" name="username" placeholder="Enter User Name" />
+    </div>
+    <div class="groceryitemInput">
+      <input type="text" name="item1" placeholder="Grocery Item #1" />
+    </div>
+    <div class="groceryitemInput">
+      <input type="text" name="item2" placeholder="Grocery Item #2" />
+    </div>
+    <div class="groceryitemInput">
+      <input type="text" name="item3" placeholder="Grocery Item #3" />
+    </div>
+    <div class="groceryitemInput">
+      <input type="text" name="item4" placeholder="Grocery Item #4" />
+    </div>
+    <div class="groceryitemInput">
+      <input type="text" name="item5" placeholder="Grocery Item #5" />
+    </div>
+    <div class="groceryitemInput">
+      <input type="text" name="item6" placeholder="Grocery Item #6" />
+    </div>
+    <div class="groceryitemInput">
+      <input type="text" name="item7" placeholder="Grocery Item #7" />
+    </div>
+    <div class="groceryitemInput">
+      <input type="text" name="item8" placeholder="Grocery Item #8" />
+    </div>
+    <input
+      type="submit"
+      class="grocerysubmit"
+      name="registerorder"
+      id="registerorder"
+      value="Submit"
+    />
+    <br />
+    <input type="reset" class="grocerysubmit" value="Reset" />
+  </form>
+</div>
+{% endblock %}

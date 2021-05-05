@@ -1,0 +1,47 @@
+{% extends "layout.html" %} {% block title %} Search {% endblock %} {% block
+content %}
+<style>
+  .searchsubmit {
+    background-color: #071d49;
+    color: white;
+    display: block;
+    margin: 0 auto;
+    border: none;
+    border-radius: 30%;
+    padding: 0.5%;
+  }
+  .searchInput {
+    padding: 1%;
+  }
+  input[type="text"] {
+    width: 20%;
+    padding: 12px 20px;
+    display: block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+</style>
+<div>
+  <form method="POST">
+    <h1 style="text-align: center; background-color: #071d49; color: white">
+      Search
+    </h1>
+    <div class="searchInput">
+      <input
+        type="text"
+        name="username"
+        id="username"
+        placeholder="Enter Username"
+      />
+    </div>
+    <input
+      type="submit"
+      class="searchsubmit"
+      name="searchIn"
+      id="searchIn"
+      value="Get Patient Data"
+    />
+  </form>
+</div>
+{% endblock %}

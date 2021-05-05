@@ -1,0 +1,163 @@
+{% extends "layout.html" %} {% block title %} Sign Up {% endblock %} {% block
+content %}
+<style>
+  input[type="text"],
+  input[type="password"],
+  input[type="email"] {
+    width: 20%;
+    padding: 12px 20px;
+    display: block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+  a {
+    color: #071d49;
+    text-decoration: none;
+  }
+  a:hover {
+    opacity: 0.8;
+  }
+  .form-group {
+    padding: 1%;
+  }
+  #submit {
+    display: block;
+    margin: 0 auto;
+  }
+  .signupsubmit {
+    background-color: #071d49;
+    color: white;
+    display: block;
+    margin: 0 auto;
+    border: none;
+    border-radius: 30%;
+    padding: 0.5%;
+  }
+</style>
+
+<section>
+  <form method="POST">
+    <h1 style="text-align: center; background-color: #071d49; color: white">
+      Sign Up
+    </h1>
+    <div class="form-group">
+      <input
+        type="text"
+        class="form-input"
+        name="name"
+        id="name"
+        placeholder="Enter Full Name"
+      />
+    </div>
+    <div class="form-group">
+      <input
+        type="text"
+        class="form-input"
+        name="username"
+        id="username"
+        placeholder="Enter a Username"
+      />
+    </div>
+    <div class="form-group">
+      <input
+        type="password"
+        class="form-input"
+        name="psw"
+        id="psw"
+        placeholder="Enter a Password"
+      />
+    </div>
+    <div class="form-group">
+      <input
+        type="email"
+        class="form-input"
+        name="email"
+        id="email"
+        placeholder="Enter a Email"
+      />
+    </div>
+    <div class="form-group">
+      <input
+        type="text"
+        class="form-input"
+        name="phone"
+        id="phone"
+        placeholder="Enter a Phone Number"
+      />
+    </div>
+    <div class="form-group">
+      <input
+        type="text"
+        class="form-input"
+        name="address"
+        id="address"
+        placeholder="Street City, State Zip"
+      />
+    </div>
+    <div class="form-group">
+      <input
+        type="text"
+        class="form-input"
+        name="age"
+        id="age"
+        placeholder="Enter Age"
+      />
+    </div>
+    <div class="form-group">
+      <input
+        type="text"
+        class="form-input"
+        name="height"
+        id="height"
+        placeholder="Enter Height"
+      />
+    </div>
+    <div class="form-group">
+      <input
+        type="text"
+        class="form-input"
+        name="weight"
+        id="weight"
+        placeholder="Enter Weight"
+      />
+    </div>
+    <div class="form-group">
+      <input
+        type="text"
+        class="form-input"
+        name="allergies"
+        id="allergies"
+        placeholder="Enter Any Allergy"
+      />
+    </div>
+    <div class="form-group">
+      <input
+        type="text"
+        class="form-input"
+        name="medicalcondition"
+        id="medicalcondition"
+        placeholder="Enter Any Medical Condition"
+      />
+    </div>
+    <div class="form-group">
+      <input
+        type="text"
+        class="form-input"
+        name="prescription"
+        id="prescription"
+        placeholder="Enter Any Prescriptions"
+      />
+    </div>
+    <div class="form-group">
+      <input
+        type="submit"
+        class="signupsubmit"
+        name="submit"
+        id="submit"
+        value="Sign up"
+      />
+    </div>
+  </form>
+</section>
+{% endblock %}

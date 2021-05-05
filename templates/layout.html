@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>{% block title %}{% endblock %}</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='layout.css')}}"
+    />
+  </head>
+
+  <body>
+    <div class="navbar" style="background-color: #071d49">
+      <a
+        href="{{ url_for('home') }}"
+        class="navbar-brand"
+        style="padding: 3.85%"
+        >Home</a
+      >
+      <a
+        href="{{ url_for('search')}}"
+        class="navbar-item"
+        style="padding: 3.85%"
+        >Search</a
+      >
+      <a
+        href="{{ url_for('mealprep') }}"
+        class="navbar-item"
+        style="padding: 3.85%"
+        >Meal Prep</a
+      >
+      <a
+        href="{{ url_for('groceryorder') }}"
+        class="navbar-item"
+        style="padding: 3.85%"
+        >Grocery Order</a
+      >
+      <a
+        href="{{ url_for('medicalorder')}}"
+        class="navbar-item"
+        style="padding: 3.85%"
+        >Medical Order</a
+      >
+      <a href="{{ url_for('login')}}" class="navbar-item" style="padding: 3.85%"
+        >Log In</a
+      >
+      <a
+        href="{{ url_for('signup')}}"
+        class="navbar-item"
+        style="padding: 3.85%"
+        >Sign Up</a
+      >
+    </div>
+
+    <div class="body-content">
+      {% block content %} {% endblock %}
+      <hr />
+    </div>
+    <p style="text-align: center; background-color: #071d49; color: white">
+      Copyright © Pencil Pushers<br /><br />
+    </p>
+  </body>
+</html>
